@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
@@ -8,7 +8,9 @@ import {
 } from "react-router-dom";
 import "./less/style.less";
 import Header from "./js/components/header/header";
-import WelcomeText from "./js/components/WelcomeText/WelcomeText";
+import RequestsList from "./js/components/RequestsList/RequestsList";
+import RequestsItem from "./js/components/RequestsItem/RequestsItem";
 
-ReactDOM.render(<WelcomeText />, document.getElementById("welcomeText"));
+ReactDOM.render(<RequestsList />, document.getElementById("requestsList"));
+ReactDOM.render(<RequestsItem name = "Творог" price = "90" markup = "Нет" />, document.getElementById("requestsItem"));
 ReactDOM.render(<Header />, document.getElementById("header"));
