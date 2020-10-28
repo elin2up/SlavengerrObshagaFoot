@@ -6,7 +6,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import "./less/style.less"; 
-import HeaderLinks from "./js/components/header__links/header__links";
+import "./less/style.less";
+import Header from "./js/components/header/header";
+import WelcomeText from "./js/components/WelcomeText/WelcomeText";
 
-ReactDOM.render(<HeaderLinks />, document.getElementById("header__links"));
+ReactDOM.render(<WelcomeText />, document.getElementById("welcomeText"));
+ReactDOM.render(<Header />, document.getElementById("header"));

@@ -1,0 +1,21 @@
+.header {
+  &__link {
+    color: black;
+    font-size: 24px;
+    font-family: "Golos Medium";
+    box-sizing: border-box;
+    transition: .4s;
+    &:hover {
+      color: green;
+      transition: color .4s;
+      cursor: pointer;
+    }
+  }
+  &__links {
+    margin-right: 40px;
+    margin-left: 100px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+}
