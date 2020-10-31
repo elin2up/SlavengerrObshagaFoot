@@ -2,6 +2,7 @@
   color: black;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0 auto;
   font-family: "Golos Medium";
   border: 1px solid #ccc;
@@ -9,6 +10,10 @@
   align-items: center;
   height: auto;
   transition: max-height 1.5s;
+  z-index: 10;
+  &__order {
+    display: none;
+  }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     width: 95%;
   }
@@ -37,6 +42,20 @@
     max-height: 400px;
     overflow: hidden;
     transition: max-height 1.5s;
+    .item_break {
+      flex-basis: 100%;
+    }
+    .item__order {
+      display: block;
+      font-family: "Golos Bold";
+      margin-top: 20px;
+      margin-left: 89%;
+      border: 0px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 15px;
+      border: 1px solid green;
+    }
     .item__name {
       white-space: normal;
       overflow: auto;
@@ -45,6 +64,9 @@
   &_cover {
     max-height: 70px;
     transition: height .8s;
+    .item__order {
+      display: none;
+    }
     .item__name {
       white-space: nowrap;
       overflow: hidden;
@@ -52,13 +74,16 @@
     }
   }
   &__price {
-    width: 35%;
+    z-index: -1;
+    width: 30%;
   }
   &__markup {
+    z-index: -1;
     width: 10%;
     
   }
   &__name {
+    z-index: -1;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

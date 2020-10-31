@@ -21,9 +21,12 @@ class RequestsList extends React.Component {
 
   clickHandler(name, markup, price) {
     const table = document.getElementById("list");
+
     table.onclick = function(event) {
       let target = event.target;
       
+      if (target.tagName != "DIV") return;
+
       uncoverList(target);
     }
 
