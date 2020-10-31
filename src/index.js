@@ -9,17 +9,15 @@ import "./less/style.less";
 import Header from "./js/components/header/header";
 import RequestsList from "./js/components/RequestsList/RequestsList";
 import RequestsItem from "./js/components/RequestsItem/RequestsItem";
-import Request from "./js/components/Request/Request";
+import CreateRequest from "./js/components/CreateRequest/CreateRequest";
 
-ReactDOM.render(<Header />, document.getElementById("header"));
 export default function App() {
   return (
     <Router>
-      <Switch>
-        <>
-          <Route path = "/request" component = {Request}></Route>
-          <Route path = "/" component = {RequestsList}></Route>
-        </>
+      <Header />
+      <Switch>        
+        <Route exact path = "/request" component = {CreateRequest}></Route>
+        <Route exact path = "/" component = {RequestsList}></Route>
       </Switch>
     </Router>
   )
